@@ -35,7 +35,7 @@ app.use(limiter);
 
 //Database connection
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI || "mongodb+srv://Mehedi:mehedi@cluster0.5bhxotd.mongodb.net/ecommerce")
   .then(() => {
     console.log("MongoDB Connected");
   })
